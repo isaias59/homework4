@@ -2,7 +2,6 @@
 #include <cstring>
 #include <iostream>
 #include <algorithm>
-#include <string>
 using namespace std;
 
 String::String(const char* s) {
@@ -333,9 +332,7 @@ void String::print(std::ostream& out) const {
 }
 
 void String::read(std::istream& in) {
-    std::string temp;
-    std::getline(in, temp); 
-    delete[] buf;          
-    buf = new char[temp.length() + 1]; 
-    std::strcpy(buf, temp.c_str());   
+    char temp[1024];
+    in >> temp;
+    buf = strdup(temp);
 }
