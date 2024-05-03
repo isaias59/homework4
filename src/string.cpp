@@ -1,4 +1,3 @@
-
 #include "string.hpp"
 #include <cstring>
 #include <iostream>
@@ -167,7 +166,7 @@ char* String::strdup(const char* s) {
     return newStr;
 }
 
-char* String::strncpy(char* dest, const char* src) 
+char* String::strcpy(char* dest, const char* src) 
 {
     char* dest_ptr = dest;
     const char* src_ptr = src;
@@ -184,7 +183,7 @@ char* String::strncpy(char* dest, const char* src)
 
 }
 
-char* String::strcpy(char* dest, const char* src, int n) {
+char* String::strncpy(char* dest, const char* src, int n) {
     int i;
     for (i = 0; i < n - 1 && src[i] != '\0'; ++i) {
         dest[i] = src[i];
@@ -271,7 +270,7 @@ void String::reverse_cpy(char* dest, const char* src) {
     dest[len] = '\0';
 }
 
-char* String::strchr(char* str, char c) {
+const char* String::strchr(const char* str, char c) {
     while (*str) {
         if (*str == c) {
             return str;  
