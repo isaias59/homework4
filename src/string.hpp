@@ -7,7 +7,7 @@ class String
 	char* buf;
 	static int strlen(const char* s);
 	static char* strdup(const char* s);
-	static char* strncpy(char* dest, const char* src);
+	static char* strcpy(char* dest, const char* src);
 	static char* strncpy(char* dest, const char* src, int n);
 	static char* strcat(char* dest, const char* src);
 	static char* strncat(char* dest, const char* src, int n);
