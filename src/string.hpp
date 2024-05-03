@@ -5,7 +5,10 @@ using namespace std;
 class String
 {
 	char* buf;
-	//static int strlen(const char* s);
+	
+public:
+
+static int strlen(const char* s);
 	static char* strdup(const char* s);
 	static char* strcpy(char* dest, const char* src);
 	static char* strncpy(char* dest, const char* src, int n);
@@ -18,9 +21,7 @@ class String
 	static  char* strstr(char* haystack, const char* needle);
 	static const char* strstr(const char* haystack, const char* needle);
 
-public:
 
-	static int strlen(const char* s);
 
 	explicit String(const char* s = "");
 	String(const String& s);
