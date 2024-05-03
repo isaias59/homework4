@@ -184,7 +184,7 @@ char* String::strncpy(char* dest, const char* src)
 
 }
 
-char* String::strncpy(char* dest, const char* src, int n) {
+char* String::strcpy(char* dest, const char* src, int n) {
     int i;
     for (i = 0; i < n - 1 && src[i] != '\0'; ++i) {
         dest[i] = src[i];
